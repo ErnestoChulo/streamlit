@@ -14,4 +14,5 @@ st.markdown("[Dame click](https://www.youtube.com/watch?v=dQw4w9WgXcQ)")
 st.latex(r"\begin{pmatrix}hola&guapo\\co&ca\end{pmatrix}")
 #mostrar 
 #boton
-st.button()
+x = st.button('x')
+st.write(x, 'x es', x*x)

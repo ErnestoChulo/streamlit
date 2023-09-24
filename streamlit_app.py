@@ -21,5 +21,4 @@ st.write(x, 'x es', x*x)
 st.markdown("---")
 st.header("**Subir Archivos**")
 pdf = st.file_uploader("Sube un archivo", type=["pdf", "jpg", "png"])
-if pdf is not None:
-  #st.pdf(pdf)
+

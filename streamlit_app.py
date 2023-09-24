@@ -24,7 +24,7 @@ pdf = st.file_uploader("Sube un archivo", type=["pdf", "jpg", "png"])
 if pdf is not None:
    pdf_data = pdf.read()
     # Mostrar el PDF en un visor
-    pdf_document = fitz.open(stream=pdf_data, filetype="pdf")
+   pdf_document = fitz.open(stream=pdf_data, filetype="pdf")
     for page_num in range(len(pdf_document)):
         page = pdf_document.load_page(page_num)
         image = page.get_pixmap()

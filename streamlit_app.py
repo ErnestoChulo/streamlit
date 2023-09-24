@@ -14,5 +14,12 @@ st.markdown("[Dame click](https://www.youtube.com/watch?v=dQw4w9WgXcQ)")
 st.latex(r"\begin{pmatrix}hola&guapo\\co&ca\end{pmatrix}")
 #mostrar 
 #boton
-x = st.button('x')
+x = st.button('PICALE')
 st.write(x, 'x es', x*x)
+
+#subir archivos
+st.markdown("---")
+st.header("**Subir Archivos**")
+pdf = st.file_uploader("Sube un archivo", type=["pdf", "jpg", "png"])
+if pdf is not None:
+  st.pdf(pdf)

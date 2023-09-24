@@ -22,8 +22,21 @@ st.markdown("---")
 st.header("**Subir Archivos**")
 pdf = st.file_uploader("Sube un archivo", type=["pdf", "jpg", "png"])
 if pdf is not None:
-  base64_pdf = base64.b64encode(pdf.read()).decode('utf-8')
-  pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"></iframe>'
-  st.markdown(pdf_display, unsafe_allow_html=True)
+   pdf_data = pdf.read()
+    # Mostrar el PDF en un visor
+    pdf_document = fitz.open(stream=pdf_data, filetype="pdf")
+    for page_num in range(len(pdf_document)):
+        page = pdf_document.load_page(page_num)
+        image = page.get_pixmap()
+        st.image(image, use_column_width=True)
+
+    # Cerrar el archivo PDF
+    pdf_document.close()
+
+
+
+
+
+
 
 

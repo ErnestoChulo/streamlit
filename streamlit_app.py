@@ -8,7 +8,7 @@ st.markdown(" > # ** Hola mundo**")#negritas, tamaño
 st.markdown("---")
 st.markdown("> Bordo") #linea horizontal
 st.markdown("[Dame click](https://www.youtube.com/watch?v=dQw4w9WgXcQ)")
-st.markdown(![hola](escudo_alemania.png))
+#st.markdown(![hola](escudo_alemania.png))
 
 #matriz
 st.latex(r"\begin{pmatrix}hola&guapo\\co&ca\end{pmatrix}")
